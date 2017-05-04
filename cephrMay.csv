@@ -1,0 +1,35 @@
+Name,Affiliation,Address,Borough,BoroCode,State,Zip,Type,F1EX_2010CensusTract,F1EX_2010CensusBlock,F1EX_NTA,F1EX_NTAname,F1AX_Latitude,F1AX_Longitude,F1AX_XCoordinate,F1AX_YCoordinate,F1AX_BinOfInputAddress
+Translational Research Building (CTSI & Department of Population Health),NYU Langone Medical Center,227 East 30th Street,New York,1,NY,10016,Schools and Colleges,70,2001,MN20,Murray Hill-Kips Bay,40.742994,-73.978499,990208,209970,1019951
+Tisch Hospital,NYU Langone Medical Center,550 First Avenue,New York,1,NY,10016,Hospital,62,1000,MN20,Murray Hill-Kips Bay,40.742463,-73.973086,991708,209777,1085588
+Hospital for Joint Diseases,NYU Langone Medical Center,301 E 17th Street,New York,1,NY,10003,Hospital,48,6001,MN21,Gramercy,40.734395,-73.983001,988961,206837,1020429
+Rusk Rehabilitation,NYU Langone Medical Center,530 First Avenue,New York,1,NY,10016,Hospital,62,1000,MN20,Murray Hill-Kips Bay,40.742463,-73.973086,991708,209777,1081694
+Arts & Sciences,NYU Schools and Colleges,100 Washington Square East,New York,1,NY,10003,Schools and Colleges,59,3002,MN23,West Village,40.730334,-73.995598,985470,205357,1008820
+College of Dentistry,NYU Schools and Colleges,345 E 24th Street,New York,1,NY,10010,Schools and Colleges,66,6000,MN20,Murray Hill-Kips Bay,40.737985,-73.978403,990235,208145,1020600
+College of Nursing,NYU Schools and Colleges,433 1st Avenue,New York,1,NY,10010,Schools and Colleges,66,7000,MN20,Murray Hill-Kips Bay,40.73863,-73.977728,990422,208380,1083651
+Courant Institute of Mathematical Sciences,NYU Schools and Colleges,251 Mercer Street,New York,1,NY,10012,Schools and Colleges,5501,1001,MN23,West Village,40.728674,-73.99567,985450,204752,1008627
+Global Institute for Public Health,NYU Schools and Colleges,41 E 11th Street,New York,1,NY,10003,Schools and Colleges,61,2000,MN23,West Village,40.733408,-73.992827,986238,206477,1009127
+Leonard N. Stern School of Business,NYU Schools and Colleges,44 West 4th Street,New York,1,NY,10012,Schools and Colleges,5501,1001,MN23,West Village,40.728981,-73.996295,985277,204864,1078952
+Tandon School of Engineering,NYU Schools and Colleges,6 MetroTech Center,Brooklyn,3,NY,11201,Schools and Colleges,11,1001,BK38,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill,40.694202,-73.986614,987962,192193,3000265
+School of Law,NYU Schools and Colleges,40 Washington Square S,New York,1,NY,10012,Schools and Colleges,65,1003,MN23,West Village,40.730546,-73.999488,984392,205434,1008716
+School of Medicine,NYU Schools and Colleges,550 1st Ave,New York,1,NY,10016,Schools and Colleges,62,1000,MN20,Murray Hill-Kips Bay,40.742463,-73.973086,991708,209777,1085588
+Silver School of Social Work,NYU Schools and Colleges,1 Washington Square N,New York,1,NY,10003,Schools and Colleges,59,2001,MN23,West Village,40.731081,-73.995562,985480,205629,1066883
+"Steinhardt School of Culture, Education and Human Development",NYU Schools and Colleges,82 Washington Square E,New York,1,NY,10003,Schools and Colleges,59,3005,MN23,West Village,40.729893,-73.996028,985351,205196,1008808
+Wagner Graduate School of Public Service,NYU Schools and Colleges,295 Lafayette Street,New York,1,NY,10012,Schools and Colleges,43,1003,MN24,SoHo-TriBeCa-Civic Center-Little Italy,40.724532,-73.995396,985526,203243,1007941
+Bellevue Hospital Center,NYC Health and Hospitals Corporation,462 First Avenue,New York,1,NY,10016,Hospital,62,1002,MN20,Murray Hill-Kips Bay,40.738747,-73.975343,991083,208423,1086515
+Coler Goldwater Specialty Hospital & Nursing Facility,NYC Health and Hospitals Corporation,900 Main Street,Roosevelt Island,1,NY,10044,Post Acute/Long Term Care Facility,23802,1000,MN31,Lenox Hill-Roosevelt Island,40.770385,-73.942001,1000315,219954,1040750
+Coney Island Hospital,NYC Health and Hospitals Corporation,2601 Ocean Parkway,Brooklyn,3,NY,11235,Hospital,370,3004,BK19,Brighton Beach,40.585646,-73.964869,994008,152645,3337274
+Governeur Health,NYC Health and Hospitals Corporation,227 Madison Street,New York,1,NY,10002,Post Acute/Long Term Care Facility,6,4000,MN28,Lower East Side,40.713196,-73.987786,987636,199113,1003224
+Kings County Hospital Center,NYC Health and Hospitals Corporation,451 Clarkson Avenue,Brooklyn,3,NY,11203,Hospital,808,1001,BK60,Prospect Lefferts Gardens-Wingate,40.656687,-73.943834,999834,178530,3327711
+Lincoln Medical and Mental Health Center,NYC Health and Hospitals Corporation,234 East 149th Street,Bronx,2,NY,10451,Hospital,65,1002,BX34,Melrose South-Mott Haven North,40.816758,-73.924478,1005154,236853,2097050
+Metropolitan Hospital Center,NYC Health and Hospitals Corporation,1901 First Avenue,New York,1,NY,10029,Hospital,15602,1000,MN33,East Harlem South,40.785054,-73.94496,999492,225298,1083929
+Woodhull Medical and Mental Health Center,NYC Health and Hospitals Corporation,760 Broadway,Brooklyn,3,NY,11206,Hospital,28501,1000,BK78,Bushwick South,40.699488,-73.942766,1000120,194124,3048341
+NYU Lutheran Medical Center,NYU Lutheran,150 55th Street,Brooklyn,3,NY,11220,Hospital,22,1001,BK32,Sunset Park West,40.646672,-74.021221,978361,174877,3014856
+Brooklyn - Chinese,NYU Lutheran,5008 7th Avenue,Brooklyn,3,NY,11220,Family Health Center,98,3000,BK34,Sunset Park East,40.64243,-74.006338,982491,173331,3393316
+Caribbean-American,NYU Lutheran,3414 Church Avenue,Brooklyn,3,NY,11203,Family Health Center,856,1002,BK91,East Flatbush-Farragut,40.650773,-73.945139,999473,176375,3109422
+Family Physician,NYU Lutheran,5616 6th Avenue,Brooklyn,3,NY,11215,Family Health Center,102,3000,BK34,Sunset Park East,40.640174,-74.012262,980847,172509,3015404
+Family Support Center (Community Based Programs),NYU Lutheran,6025 6th Avenue,Brooklyn,3,NY,11220,Family Health Center,118,2000,BK34,Sunset Park East,40.6377,-74.01402,980359,171608,3143523
+Park Ridge,NYU Lutheran,6317 4th Avenue,Brooklyn,3,NY,11220,Family Health Center,122,3001,BK32,Sunset Park West,40.638627,-74.020228,978636,171946,3144058
+Park Slope,NYU Lutheran,220 13th Street,Brooklyn,3,NY,11215,Family Health Center,141,3000,BK37,Park Slope-Gowanus,40.667287,-73.990314,986937,182387,3339179
+Shore Road,NYU Lutheran,9000 Shore Road,Brooklyn,3,NY,11209,Family Health Center,5201,1001,BK31,Bay Ridge,40.621972,-74.038872,973459,165880,3322532
+"Sunset Park (Adult Medicine, Specialty Care and Dentistry)",NYU Lutheran,150 55th Street,Brooklyn,3,NY,11220,Family Health Center,22,1001,BK32,Sunset Park West,40.646672,-74.021221,978361,174877,3014856
+"Sunset Park (Women's, Pediatrics and Adolescent Medicine)",NYU Lutheran,5610 2nd Avenue,Brooklyn,3,NY,11220,Family Health Center,22,1002,BK32,Sunset Park West,40.645613,-74.020983,978427,174491,3398930
