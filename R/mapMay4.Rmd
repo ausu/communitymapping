@@ -8,7 +8,7 @@ output:
 ---
 ***
 
-## Check out a map of the CAB member oganizations in [Carto](https://susankum.carto.com/builder/d2df9422-0fda-11e7-a54b-0ee66e2c9693/embed).  
+## Check out a map of the CAB member oganizations in [CARTO](https://susankum.carto.com/builder/d2df9422-0fda-11e7-a54b-0ee66e2c9693/embed).  
   
 ### Scroll down to see the map of CTSI NYU and HHC institutions.  
 
@@ -34,7 +34,7 @@ cdc.wide <- reshape2::dcast(select.cdc,
                             value.var="data_value")
 split.cdc <- split(select.cdc, select.cdc$measureid)
 
-# Retrieve TIGER/Line Census tracts shapefiles form United States Census Bureau
+# Retrieve TIGER/Line Census tracts shapefiles from United States Census Bureau
 nycTracts <- tigris::tracts(state='NY', county=c('New York', 'Bronx', 'Kings', 'Queens', 'Richmond'), 
                             refresh=T)
 ```
@@ -64,7 +64,7 @@ tract.measures <- paste0("<b>", nycTracts$NAMELSAD, "</b><br>", "<ul>","<li><i>"
 ```
 
 ### Map Symbology
-The marker symbols will differ by color and size.  The color indicates the "Affiliation"" and the size indicates the "Type".  The two functions, getColor() and getSize() will be called when generating the leaflet map. 
+The marker symbols will differ by color and size.  The color indicates the "Affiliation" and the size indicates the "Type".  The two functions, getColor() and getSize(), will be called when generating the leaflet map. 
 ```{r symbology}
 
 # Marker Color, by Affiliation
@@ -105,7 +105,7 @@ The map is generated with [Leaflet for R package](https://rstudio.github.io/leaf
 
 * NYU and HHC point locations by "Type"
     + Post Acute/Long Term Care Facility
-    + Schools and College  
+    + Schools and Colleges  
     + Hospital
     + Family Health Center
 
