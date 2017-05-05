@@ -1,0 +1,178 @@
+---
+title: "Community Mapping Project"
+date: "Updated May 4, 2017"    
+output: 
+  html_document: 
+    highlight: textmate
+    theme: cerulean
+---
+***
+
+## Check out a map of the CAB member oganizations in [Carto](https://susankum.carto.com/builder/d2df9422-0fda-11e7-a54b-0ee66e2c9693/embed).  
+  
+### Scroll down to see the map of CTSI NYU and HHC institutions.  
+
+***  
+
+### Input data
+Information about the NYU and HHC point locations are stored in a [.csv file](https://raw.githubusercontent.com/ausu/communitymapping/master/cephrMay.csv).  The [Geosupport Desktop Edition](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page) was used to geocode addresses, i.e. obtain geographic coordinates, latitude and longitude. Additional data is loaded from Socrata open data portals using the [RSocrata package](https://cran.r-project.org/web/packages/RSocrata/index.html).  The census tract data is loaded into R using the [tigris package](https://cran.r-project.org/web/packages/tigris/index.html).   
+
+```{r input, results="hide"}
+# Point locations of NYU and HHC institutions
+input <- read.csv("https://raw.githubusercontent.com/ausu/communitymapping/master/cephrMay.csv", 
+                  header=T, stringsAsFactors = F)
+
+# Retrieve and filter data from Facilities Database (FacDB), NYC DCP via NYC OpenData Portal
+facilities <- RSocrata::read.socrata("https://data.cityofnewyork.us/resource/vjk2-cm33.json")
+fac <- dplyr::filter(facilities, facsubgrp=="Mental Health")
+
+# Retrieve and format data from CDC 500 Cities Data Portal
+cdc500cities <- RSocrata::read.socrata("https://chronicdata.cdc.gov/resource/csmm-fdhi.json?cityname=New York")
+select.cdc <- cdc500cities[,c(5:8,15,16,17,21)]
+cdc.wide <- reshape2::dcast(select.cdc, 
+                            tractfips + data_value_unit + data_value_type + datasource ~ measureid,
+                            value.var="data_value")
+split.cdc <- split(select.cdc, select.cdc$measureid)
+
+# Retrieve TIGER/Line Census tracts shapefiles form United States Census Bureau
+nycTracts <- tigris::tracts(state='NY', county=c('New York', 'Bronx', 'Kings', 'Queens', 'Richmond'), 
+                            refresh=T)
+```
+
+
+### Popup Content
+Information that will appear on click of the markers (NYU and HHC point locations) and areas (census tracts).  
+Note: The popup content for census tracts are from the CDC 500 Cities data set.
+```{r popup}
+
+#Points
+point.info <- paste0("<b>",input$Name, "</b><br>", 
+               input$Affiliation, "<br>",
+               "<b><br>Address </b><br>", input$Address, "<br>", 
+               input$Borough, ", ", input$State, " ", input$Zip
+               )
+
+#Polygons
+tract.measures <- paste0("<b>", nycTracts$NAMELSAD, "</b><br>", "<ul>","<li><i>",
+               "Physical health not good for >=14 days among adults aged >=18 Years: ","</i>",
+               "<b>",nycTracts$PHLTH, nycTracts$data_value_unit, "</b></li><br>", "<li><i>",
+               "Mental health not good for >=14 days among adults aged >=18 Years: ", "</i>",
+               "<b>",nycTracts$MHLTH, nycTracts$data_value_unit,  "</b></li><br>", "<li><i>",
+               "Current lack of health insurance among adults aged 18-64 Years: ", "</i>",
+               "<b>",nycTracts$ACCESS2, nycTracts$data_value_unit, "</b></li><br>", "</ul>"
+               )
+```
+
+### Map Symbology
+The marker symbols will differ by color and size.  The color indicates the "Affiliation"" and the size indicates the "Type".  The two functions, getColor() and getSize() will be called when generating the leaflet map. 
+```{r symbology}
+
+# Marker Color, by Affiliation
+input$Affiliation <- as.factor(input$Affiliation)
+getColor <- function(input) {
+  sapply(input$Affiliation, function(Affiliation){
+    if(Affiliation=="NYC Health and Hospitals Corporation") {
+      "magenta"
+    } else if(Affiliation=="NYU Langone Medical Center"|Affiliation=="NYU Lutheran") {
+      "blue"
+    } else {
+      "purple"
+    }
+    })
+  }
+
+# Marker Size, by Type
+input$Type <- as.factor(input$Type)
+getSize <- function(input) {
+  sapply(input$Type, function(Type){
+    if(Type=="Family Health Center") {
+      "2"
+      } else if (Type=="Post Acute/Long Term Care Facility") {
+      "3"
+        } else if (Type=="Hospital"){
+      "5"
+          } else {
+      "7"
+      }
+    })
+}
+```
+
+### Leaflet Map
+The map is generated with [Leaflet for R package](https://rstudio.github.io/leaflet/).  
+
+* Base: TonerHybrid tile provided by [Stamen](http://maps.stamen.com)
+
+* NYU and HHC point locations by "Type"
+    + Post Acute/Long Term Care Facility
+    + Schools and College  
+    + Hospital
+    + Family Health Center
+
+* Mental Health Resources from NYC DCP FacDB (red circle markers)
+
+* Census Tracts with selected measures from CDC 500 Cities (blue polygon outlines)
+    + Physical health not good for >=14 days among adults aged >=18 Years
+    + Mental health not good for >=14 days among adults aged >=18 Years
+    + Current lack of health insurance among adults aged 18-64 Years
+
+A box appears at the bottom right where different layers to be displayed can be selected.  
+```{r map}
+library(leaflet)
+layersData <- split(input, input$Type)
+
+# Base Layer using provider tiles
+baseLayer <- leaflet(width="100%") %>%
+  addProviderTiles(providers$Stamen.TonerHybrid)
+  #addProviderTiles(providers$CartoDB.Positron)
+
+# Primary Layer
+for (i in 1:length(layersData)){
+  mLayers = addCircleMarkers(baseLayer,
+                             data=input, 
+                             lat=~F1AX_Latitude, lng=~F1AX_Longitude,
+                             group=~Type,
+                             popup=~point.info, 
+                             color=getColor(input), 
+                             radius=getSize(input),
+                             stroke=T, 
+                             fillOpacity=0.5
+  ) } 
+
+# Additional Layers
+mAdd <- mLayers %>%
+            
+  addCircleMarkers(data=fac,
+                   lat=~as.numeric(latitude),
+                   lng=~as.numeric(longitude),
+                   label=~facname,
+                   group="Mental Health Resources",
+                   color="red",
+                   radius=3,
+                   clusterOptions=markerClusterOptions(
+                     removeOutsideVisibleBounds=F)) %>%
+  
+  addPolygons(data=nycTracts, 
+              color="blue", weight=0.5, 
+              opacity=1.0, fillOpacity=0, 
+              popup=~tract.measures,
+              group="Census Tracts")
+  
+# Layer Controls
+mControls <- mAdd %>%
+  addLayersControl(
+    overlayGroups=c(
+      "Mental Health Resources",
+      levels(input$Type), 
+      "Census Tracts"),
+    position="bottomright",
+    options=layersControlOptions(collapsed=F)) %>% 
+  hideGroup("Census Tracts")
+```
+
+### Map
+**Select the 'Census Tracts' layer and click on the map to see the values for measures.** 
+```{r pressure, echo=FALSE}
+mControls
+```
+
