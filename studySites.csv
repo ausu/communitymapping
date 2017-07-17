@@ -1,0 +1,48 @@
+ID,Program,Name,Latitude,Longitude,Category,Type,Partner
+1,RICE,Korean Community Services,40.763998,-73.806613, ,Recruitment, 
+2,RICE,UNITED SIKHS Educare Center,40.690248,-73.832119, ,Recruitment, 
+3,RICE,Taxi Workers Alliance,40.744821,-73.987207, ,Recruitment, 
+4,DREAM,Bellevue Hospital,40.73922,-73.9755,Health Center,Recruitment, 
+5,DREAM,Morris Heights Health Center,40.8547,-73.91081,Health Center,Recruitment, 
+6,DREAM,Long Island City Community Healthcare Network,40.75933,-73.93679,Health Center,Recruitment, 
+7,DREAM,Dr. Sheikh Hasan,40.64315,-73.97905,Office,Recruitment, 
+8,DREAM,Queens Hospital Center,40.71698,-73.80412,Health Center,Recruitment, 
+9,DREAM,Dr. Nahreen Mamoon,40.71126,-73.79406,Office,Recruitment, 
+10,DREAM,Dr. Zaber Khan,40.67697,-73.86957,Office,Recruitment, 
+11,DREAM,Dr. Shah Alam,40.6782,-73.8693,Office,Recruitment, 
+12,DREAM,Bangladeshi American Community Develoment and Youth Services Outreach,40.67862,-73.86389,Community Center,Recruitment, 
+13,DREAM,Bangladesh Muslim Center,40.63812,-73.97817,Faith-Based Organization,Partner, 
+14,DREAM,Baitul Mamur Mosque,40.67694,-73.8718,Faith-Based Organization,Partner, 
+15,DREAM,Al-Aman Masjid,40.67817,-73.86367,Faith-Based Organization,Partner, 
+16,DREAM,Jamaica Muslim Center/India Home,40.71265,-73.79577,Faith-Based Organization,Partner, 
+17,DREAM,Madina Masjid,40.72935,-73.98367,Faith-Based Organization,Partner, 
+18,DREAM,Assafa Islamic Center,40.72016,-73.99071,Faith-Based Organization,Partner, 
+19,DREAM,New York Taxi Workers Alliance,40.75454,-73.93074,Community-Based Organization,Partner, 
+20,DREAM,Adunika,40.77879,-73.90659,Community-Based Organization,Partner, 
+21,DREAM,Andolon,40.75279,-73.88013,Community-Based Organization,Partner, 
+22,DREAM,SAPNA NYC,40.83455,-73.84654,Community-Based Organization,Partner, 
+23,DREAM,BACDYS,40.67862,-73.86389,Community-Based Organization,Partner, 
+24,DREAM,Chittagong Association of North America,40.64103,-73.97878,Community-Based Organization,Partner, 
+25,DREAM,Bangladesh Society,40.7419,-73.87828,Community-Based Organization,Partner, 
+26,KOT,Elmhurst Baptist Church,40.743351,-73.877784,Faith-Based Organization, ,Kalusugan Coalition
+27,KOT,Bayanihan Seventh Day Adventist Church,40.743186,-73.827972,Faith-Based Organization, ,Kalusugan Coalition
+28,KOT,Yeshua Worldwide Ministries,40.74705,-73.903102,Faith-Based Organization, ,Kalusugan Coalition
+29,KOT,Hyo Shin Bible Presbyterian Church of NY,40.759008,-73.800116,Faith-Based Organization, ,Korean Community Services
+30,KOT,First United Methodist Church in Flushing,40.763527,-73.816989,Faith-Based Organization, ,Korean Community Services
+31,KOT,So-Mahng Presbyterian Church,40.8535479,-73.99958015,Faith-Based Organization, ,Korean Community Services
+32,KOT,Baitul Mamur,40.676954,-73.871824,Faith-Based Organization, ,DREAM
+33,KOT,Bangladesh Muslim Center,40.638136,-73.978183,Faith-Based Organization, ,DREAM
+34,KOT,India Home Jamaica,40.712655,-73.795742,Faith-Based Organization, ,DREAM
+35,KOT,Gurdwara Singh Sabha,40.57090546,-74.22983599,Faith-Based Organization, ,United Sikhs
+36,KOT,Gurdwara Dashmes Darbar,40.57008687,-74.23637528,Faith-Based Organization, ,United Sikhs
+37,KOT,Gurdwara Sant Majha Singh Karamjot Sikh Center,40.685709,-73.807961,Faith-Based Organization, ,United Sikhs
+38,HHAP,Taft,40.79870053,-73.94683255,Housing Development, ,New York City Housing Authority
+39,HHAP,Clinton,40.79480294,-73.94541385,Housing Development, ,New York City Housing Authority
+40,HHAP,East River,40.78753353,-73.94006633,Housing Development, ,New York City Housing Authority
+41,HHAP,Carver,40.78979389,-73.95131032,Housing Development, ,New York City Housing Authority
+42,HHAP,Jefferson,40.79485042,-73.93698134,Housing Development, ,New York City Housing Authority
+43,HHAP,Johnson,40.79731742,-73.9435504,Housing Development, ,New York City Housing Authority
+44,HHAP,King Towers,40.79965879,-73.94908784,Housing Development, ,New York City Housing Authority
+45,HHAP,Lehman Village,40.79421004,-73.94810968,Housing Development, ,New York City Housing Authority
+46,HHAP,Washington,40.78761195,-73.94608732,Housing Development, ,New York City Housing Authority
+47,HHAP,Wagner,40.79887455,-73.93112737,Housing Development, ,New York City Housing Authority
